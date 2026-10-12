@@ -19,3 +19,7 @@ desktop.ini
 # Archivos de entorno
 .env
 .env.*
+# Documentacion interna: no publicar en EladioTechnia
+/ESTADO_PROYECTO.md
+/aventuras/psicologa/documentacion/
+/aventuras/psicologa/guion.md

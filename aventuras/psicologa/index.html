@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Una psicóloga me invita a entrar en su oficina</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="data:,">
+</head>
+
+<body>
+    <div id="game-container">
+        <!-- Pantalla de título -->
+        <div id="title-screen" class="screen active">
+            <h1>Una psicóloga me invita<br>a entrar en su oficina</h1>
+            <p class="subtitle">El lugar donde tus deseos más ocultos dejan de ser teoría.</p>
+            <button id="start-btn">Comenzar</button>
+            <button id="continue-btn" class="hidden">Continuar partida</button>
+            <button id="new-game-btn" class="hidden">Nueva aventura</button>
+        </div>
+
+        <!-- NUEVO: Control de música (opcional) -->
+        <!--<div id="title-music-controls">
+            <button id="title-music-toggle" class="music-btn" title="Reproducir/Pausar música">🔊</button>
+        </div>-->
+
+        <!-- Pantalla de juego -->
+        <div id="game-screen" class="screen">
+
+            <!-- FASE 1: IMAGEN A PANTALLA COMPLETA -->
+            <div id="image-phase" class="phase">
+                <img id="scene-image" src="" alt="">
+                <div id="image-hint" class="image-hint">Pulsa para continuar</div>
+            </div>
+
+            <!-- FASE 2: TEXTO A PANTALLA COMPLETA -->
+            <div id="text-phase" class="phase">
+                <div id="text-container">
+                    <p id="scene-text"></p>
+                </div>
+                <button id="continue-reading-btn" class="continue-btn">Continuar ▸</button>
+            </div>
+
+            <!-- FASE 3: OPCIONES A PANTALLA COMPLETA -->
+            <div id="options-phase" class="phase">
+                <div id="options-container"></div>
+            </div>
+
+            <!-- Botón flotante para abrir el historial -->
+            <button id="history-toggle" class="history-toggle" title="Ver historial">📜</button>
+
+            <!-- Panel del historial (oculto por defecto) -->
+            <div id="history-panel" class="history-panel hidden">
+                <div class="history-header">
+                    <span>📖 Historial de la conversación</span>
+                    <button id="close-history-btn" title="Cerrar">✕</button>
+                </div>
+                <div id="history-content"></div>
+            </div>
+
+            <!-- Botón flotante para ver estadísticas -->
+            <button id="stats-toggle" class="stats-toggle" title="Ver estadísticas">👁</button>
+
+            <!-- Panel de estadísticas -->
+            <div id="stats-panel" class="stats-panel hidden">
+                <div class="stat-row">
+                    <span class="stat-label">Deseo</span>
+                    <div class="stat-bar">
+                        <div class="stat-fill" id="bar-deseo"></div>
+                    </div>
+                    <span class="stat-value" id="stat-deseo">0</span>
+                </div>
+                <div class="stat-row">
+                    <span class="stat-label">Confianza</span>
+                    <div class="stat-bar">
+                        <div class="stat-fill" id="bar-confianza"></div>
+                    </div>
+                    <span class="stat-value" id="stat-confianza">0</span>
+                </div>
+                <div class="stat-row">
+                    <span class="stat-label">Dominio</span>
+                    <div class="stat-bar">
+                        <div class="stat-fill" id="bar-dominio"></div>
+                    </div>
+                    <span class="stat-value" id="stat-dominio">0</span>
+                </div>
+                <div class="stat-row">
+                    <span class="stat-label">Misterio</span>
+                    <div class="stat-bar">
+                        <div class="stat-fill" id="bar-misterio"></div>
+                    </div>
+                    <span class="stat-value" id="stat-misterio">0</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pantalla de final -->
+        <div id="end-screen" class="screen">
+            <h2 id="end-title"></h2>
+            <p id="end-text"></p>
+            <button id="restart-btn">Volver a empezar</button>
+        </div>
+    </div>
+
+    <audio id="bg-audio" loop></audio>
+    <audio id="sfx-audio"></audio>
+
+    <script src="js/story.js"></script>
+    <script src="js/engine.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
