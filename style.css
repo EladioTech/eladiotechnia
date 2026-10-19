@@ -101,7 +101,8 @@ body {
 
 @keyframes pulseGlow {
 
-    0%, 100% {
+    0%,
+    100% {
         box-shadow:
             0 0 15px rgba(212, 165, 116, 0.2),
             0 0 30px rgba(212, 165, 116, 0.1);
@@ -355,6 +356,66 @@ details[open] .pulse-button {
     line-height: 1.5;
 }
 
+
+/* Controles para cambiar de cinta en El jardín de cristal */
+.controles-cintas {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    max-width: 720px;
+    margin: 20px auto;
+    padding: 18px;
+    border: 1px solid rgba(212, 175, 55, 0.35);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.03);
+    color: #ddd;
+}
+
+.controles-cintas label {
+    font-size: 0.95rem;
+    color: #d4af37;
+}
+
+#selector-cinta {
+    max-width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #666;
+    border-radius: 5px;
+    background: #171717;
+    color: #fff;
+    font: inherit;
+}
+
+#boton-cambiar-cinta {
+    padding: 10px 16px;
+    border: 1px solid #d4af37;
+    border-radius: 5px;
+    background: transparent;
+    color: #d4af37;
+    font: inherit;
+    cursor: pointer;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+#boton-cambiar-cinta:hover {
+    background: #d4af37;
+    color: #171717;
+}
+
+#boton-cambiar-cinta:disabled {
+    opacity: 0.5;
+    cursor: wait;
+}
+
+#estado-cinta {
+    flex-basis: 100%;
+    margin: 0;
+    color: #aaa;
+    font-size: 0.9rem;
+    text-align: center;
+}
 
 /* ============================================================
    PIE

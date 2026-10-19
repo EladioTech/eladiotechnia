@@ -8,13 +8,15 @@
 
     <title>EladioTechnia | Aventuras narrativas y proyectos propios</title>
 
-    <meta name="description" content="Descubre EladioTechnia: aventuras narrativas interactivas, proyectos para ZX Spectrum, desarrollo web y experimentos creativos de Eladio Rey.">
+    <meta name="description"
+        content="Descubre EladioTechnia: aventuras narrativas interactivas, proyectos para ZX Spectrum, desarrollo web y experimentos creativos de Eladio Rey.">
 
     <link rel="canonical" href="https://eladiotech.github.io/eladiotechnia/">
 
     <meta property="og:type" content="website">
     <meta property="og:title" content="EladioTechnia | Aventuras narrativas y proyectos propios">
-    <meta property="og:description" content="Aventuras narrativas, desarrollo web y proyectos creativos que transforman ideas en experiencias interactivas.">
+    <meta property="og:description"
+        content="Aventuras narrativas, desarrollo web y proyectos creativos que transforman ideas en experiencias interactivas.">
     <meta property="og:url" content="https://eladiotech.github.io/eladiotechnia/">
     <meta property="og:image" content="https://eladiotech.github.io/eladiotechnia/img/jardin_carga.png">
 
@@ -293,6 +295,27 @@
                 </p>
 
             </div>
+
+
+            <div class="controles-cintas">
+                <label for="selector-cinta">Cambiar de cinta:</label>
+
+                <select id="selector-cinta">
+                    <option value="parte1">Parte 1</option>
+                    <option value="parte2a">Parte 2A</option>
+                    <option value="parte2b">Parte 2B</option>
+                    <option value="parte2c">Parte 2C</option>
+                </select>
+
+                <button id="boton-cambiar-cinta" type="button">
+                    Cargar cinta
+                </button>
+
+                <p id="estado-cinta" role="status" aria-live="polite">
+                    Cinta inicial: Parte 1
+                </p>
+            </div>
+
 
             <div id="spectrum"></div>
 
